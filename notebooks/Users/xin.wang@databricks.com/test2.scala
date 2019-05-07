@@ -22,3 +22,4 @@ dbutils.fs.rm("/databricks/init/global.sh")
 
 // COMMAND ----------
 
+// MAGIC %sh echo hehe
