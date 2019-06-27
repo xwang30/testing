@@ -55,3 +55,9 @@ matchesDf
 
 // COMMAND ----------
 
+// MAGIC %scala
+// MAGIC 
+// MAGIC sc.version
+
+// COMMAND ----------
+
