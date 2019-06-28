@@ -57,7 +57,7 @@ matchesDf
 
 // MAGIC %scala
 // MAGIC 
-// MAGIC 1+1
+// MAGIC 2+2
 
 // COMMAND ----------
 
