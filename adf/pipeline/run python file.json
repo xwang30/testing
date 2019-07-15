@@ -16,6 +16,9 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pythonFile": "dbfs:/FileStore/tables/samples.py",
+					"parameters": [
+						"10"
+					],
 					"libraries": [
 						{
 							"pypi": {
