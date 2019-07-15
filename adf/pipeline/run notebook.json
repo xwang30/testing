@@ -1,6 +1,31 @@
 {
 	"name": "run notebook",
 	"properties": {
+		"activities": [
+			{
+				"name": "DatabricksNotebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/xin.wang@databricks.com/adf test",
+					"baseParameters": {
+						"TableName": "adf_demo"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
 		"annotations": []
 	}
 }
