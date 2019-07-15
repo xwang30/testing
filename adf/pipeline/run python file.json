@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"pythonFile": "dbfs:/FileStore/tables/samples.py",
 					"parameters": [
-						"10"
+						"2"
 					],
 					"libraries": [
 						{
