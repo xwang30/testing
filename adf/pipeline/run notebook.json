@@ -18,7 +18,24 @@
 					"notebookPath": "/Users/xin.wang@databricks.com/adf test",
 					"baseParameters": {
 						"TableName": "adf_demo"
-					}
+					},
+					"libraries": [
+						{
+							"pypi": {
+								"package": "sendgrid==5.6.0"
+							}
+						},
+						{
+							"pypi": {
+								"package": "azure.datalake.store "
+							}
+						},
+						{
+							"pypi": {
+								"package": "pyminizip"
+							}
+						}
+					]
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks",
