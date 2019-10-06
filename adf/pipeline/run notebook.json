@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/xin.wang@databricks.com/adf test",
+					"notebookPath": "/Users/b-quleng@microsoft.com/test",
 					"baseParameters": {
 						"TableName": "adf_demo"
 					},
@@ -38,7 +38,7 @@
 					]
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricks",
+					"referenceName": "Walmart_repo",
 					"type": "LinkedServiceReference"
 				}
 			}
