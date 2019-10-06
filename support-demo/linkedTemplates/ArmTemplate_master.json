@@ -23,9 +23,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'Walmart_repo'"
 		},
+		"walmart_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'walmart_100'"
+		},
+		"walmart_150_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'walmart_150'"
+		},
 		"walmart_20_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'walmart_20'"
+		},
+		"walmart_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'walmart_50'"
 		},
 		"walmart_test_accessToken": {
 			"type": "secureString",
@@ -70,8 +82,17 @@
 					"Walmart_repo_accessToken": {
 						"value": "[parameters('Walmart_repo_accessToken')]"
 					},
+					"walmart_100_accessToken": {
+						"value": "[parameters('walmart_100_accessToken')]"
+					},
+					"walmart_150_accessToken": {
+						"value": "[parameters('walmart_150_accessToken')]"
+					},
 					"walmart_20_accessToken": {
 						"value": "[parameters('walmart_20_accessToken')]"
+					},
+					"walmart_50_accessToken": {
+						"value": "[parameters('walmart_50_accessToken')]"
 					},
 					"walmart_test_accessToken": {
 						"value": "[parameters('walmart_test_accessToken')]"
