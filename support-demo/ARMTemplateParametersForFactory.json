@@ -17,6 +17,9 @@
 		"Walmart_repo_accessToken": {
 			"value": ""
 		},
+		"walmart_20_accessToken": {
+			"value": ""
+		},
 		"walmart_test_accessToken": {
 			"value": ""
 		}

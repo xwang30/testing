@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'Walmart_repo'"
 		},
+		"walmart_20_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'walmart_20'"
+		},
 		"walmart_test_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'walmart_test'"
@@ -65,6 +69,9 @@
 					},
 					"Walmart_repo_accessToken": {
 						"value": "[parameters('Walmart_repo_accessToken')]"
+					},
+					"walmart_20_accessToken": {
+						"value": "[parameters('walmart_20_accessToken')]"
 					},
 					"walmart_test_accessToken": {
 						"value": "[parameters('walmart_test_accessToken')]"
