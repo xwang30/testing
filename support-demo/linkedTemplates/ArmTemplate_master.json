@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks'"
 		},
+		"Walmart_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'Walmart'"
+		},
 		"Walmart_repo_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'Walmart_repo'"
@@ -51,6 +55,9 @@
 					},
 					"AzureDatabricks_accessToken": {
 						"value": "[parameters('AzureDatabricks_accessToken')]"
+					},
+					"Walmart_accessToken": {
+						"value": "[parameters('Walmart_accessToken')]"
 					},
 					"Walmart_repo_accessToken": {
 						"value": "[parameters('Walmart_repo_accessToken')]"
