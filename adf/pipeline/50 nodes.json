@@ -1,9 +1,9 @@
 {
-	"name": "20nodes",
+	"name": "50 nodes",
 	"properties": {
 		"activities": [
 			{
-				"name": "20",
+				"name": "50nodes",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -18,12 +18,12 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "walmart_20",
+					"referenceName": "walmart_50",
 					"type": "LinkedServiceReference"
 				}
 			},
 			{
-				"name": "DatabricksNotebook1",
+				"name": "50nodes1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -38,12 +38,12 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "walmart_20",
+					"referenceName": "walmart_50",
 					"type": "LinkedServiceReference"
 				}
 			},
 			{
-				"name": "DatabricksNotebook2",
+				"name": "100nodes2",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -58,12 +58,12 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "walmart_20",
+					"referenceName": "walmart_100",
 					"type": "LinkedServiceReference"
 				}
 			},
 			{
-				"name": "DatabricksNotebook3",
+				"name": "100nodes1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -78,12 +78,12 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "walmart_20",
+					"referenceName": "walmart_100",
 					"type": "LinkedServiceReference"
 				}
 			},
 			{
-				"name": "DatabricksNotebook4",
+				"name": "150nodes",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -98,7 +98,27 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "walmart_20",
+					"referenceName": "walmart_150",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "150nodes2",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "walmart_150",
 					"type": "LinkedServiceReference"
 				}
 			}
