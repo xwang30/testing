@@ -139,7 +139,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/xin.wang@databricks.com/adf test",
+							"notebookPath": "/Users/b-quleng@microsoft.com/test",
 							"baseParameters": {
 								"TableName": "adf_demo"
 							},
@@ -162,7 +162,7 @@
 							]
 						},
 						"linkedServiceName": {
-							"referenceName": "AzureDatabricks",
+							"referenceName": "Walmart_repo",
 							"type": "LinkedServiceReference"
 						}
 					}
@@ -170,7 +170,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks')]"
+				"[concat(variables('factoryId'), '/linkedServices/Walmart_repo')]"
 			]
 		},
 		{
@@ -224,6 +224,29 @@
 				"activities": [
 					{
 						"name": "Notebook1",
+						"type": "DatabricksNotebook",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Shared/test",
+							"baseParameters": {
+								"test": "hehe"
+							}
+						},
+						"linkedServiceName": {
+							"referenceName": "Walmart_repo",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "DatabricksNotebook1",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
