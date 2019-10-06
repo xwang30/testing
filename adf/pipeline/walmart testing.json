@@ -3,29 +3,6 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Notebook1",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Shared/test",
-					"baseParameters": {
-						"test": "hehe"
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "Walmart_repo",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
 				"name": "DatabricksNotebook1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
@@ -41,7 +18,67 @@
 					"notebookPath": "/Users/b-quleng@microsoft.com/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "Walmart_repo",
+					"referenceName": "Walmart",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "DatabricksNotebook2",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/b-quleng@microsoft.com/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "Walmart",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "DatabricksNotebook3",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/b-quleng@microsoft.com/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "Walmart",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "DatabricksNotebook4",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/b-quleng@microsoft.com/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "Walmart",
 					"type": "LinkedServiceReference"
 				}
 			}
