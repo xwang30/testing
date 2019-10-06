@@ -601,7 +601,7 @@
 						}
 					},
 					{
-						"name": "10nodes1",
+						"name": "30nodes1",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -621,7 +621,7 @@
 						}
 					},
 					{
-						"name": "10node2",
+						"name": "30node2",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -641,7 +641,7 @@
 						}
 					},
 					{
-						"name": "10node3",
+						"name": "30node3",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -661,7 +661,7 @@
 						}
 					},
 					{
-						"name": "10node4",
+						"name": "30node4",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -681,7 +681,7 @@
 						}
 					},
 					{
-						"name": "10node5",
+						"name": "30node5",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -701,7 +701,7 @@
 						}
 					},
 					{
-						"name": "10node6",
+						"name": "30node6",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -721,7 +721,7 @@
 						}
 					},
 					{
-						"name": "10node7",
+						"name": "30node7",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -741,7 +741,7 @@
 						}
 					},
 					{
-						"name": "10node8",
+						"name": "30node8",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -761,7 +761,7 @@
 						}
 					},
 					{
-						"name": "10node9",
+						"name": "30node9",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -781,7 +781,7 @@
 						}
 					},
 					{
-						"name": "10node10",
+						"name": "30node10",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -1942,7 +1942,7 @@
 						"value": "[parameters('walmart_test_accessToken')]"
 					},
 					"newClusterNodeType": "Standard_DS4_v2",
-					"newClusterNumOfWorker": "9",
+					"newClusterNumOfWorker": "29",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
