@@ -4,18 +4,39 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Data Factory Name",
+			"metadata": "Data Factory name",
 			"defaultValue": "support-demo"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
 		"AzureDatabricks_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks'"
+		},
+		"Walmart_repo_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'Walmart_repo'"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage1_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureDatabricks')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -30,12 +51,30 @@
 						"type": "SecureString",
 						"value": "[parameters('AzureDatabricks_accessToken')]"
 					},
-					"newClusterNodeType": "Standard_DS4_v2",
-					"newClusterNumOfWorker": "2:5",
+					"existingClusterId": "0816-231109-albs775"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Walmart_repo')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://eastus.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('Walmart_repo_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_D16s_v3",
+					"newClusterNumOfWorker": "400",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
-					"newClusterVersion": "5.4.x-scala2.11"
+					"newClusterVersion": "apache-spark-2.4.x-scala2.11"
 				}
 			},
 			"dependsOn": []
@@ -103,7 +142,24 @@
 							"notebookPath": "/Users/xin.wang@databricks.com/adf test",
 							"baseParameters": {
 								"TableName": "adf_demo"
-							}
+							},
+							"libraries": [
+								{
+									"pypi": {
+										"package": "sendgrid==5.6.0"
+									}
+								},
+								{
+									"pypi": {
+										"package": "azure.datalake.store "
+									}
+								},
+								{
+									"pypi": {
+										"package": "pyminizip"
+									}
+								}
+							]
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks",
@@ -138,7 +194,7 @@
 						"typeProperties": {
 							"pythonFile": "dbfs:/FileStore/tables/samples.py",
 							"parameters": [
-								"10"
+								"2"
 							],
 							"libraries": [
 								{
@@ -158,6 +214,39 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/walmart testing')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Notebook1",
+						"type": "DatabricksNotebook",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/b-quleng@microsoft.com/test"
+						},
+						"linkedServiceName": {
+							"referenceName": "Walmart_repo",
+							"type": "LinkedServiceReference"
+						}
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Walmart_repo')]"
 			]
 		}
 	]

@@ -5,7 +5,13 @@
 		"factoryName": {
 			"value": "support-demo"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureDatabricks_accessToken": {
+			"value": ""
+		},
+		"Walmart_repo_accessToken": {
 			"value": ""
 		},
 		"containerUri": {

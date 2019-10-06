@@ -4,12 +4,20 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Data Factory Name",
+			"metadata": "Data Factory name",
 			"defaultValue": "support-demo"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
 		"AzureDatabricks_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks'"
+		},
+		"Walmart_repo_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'Walmart_repo'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -17,7 +25,7 @@
 		},
 		"containerSasToken": {
 			"type": "string",
-			"metadata": "Sas Token to storage account containing linked ARM templates"
+			"metadata": "Sas token to storage account containing linked ARM templates"
 		}
 	},
 	"variables": {
@@ -38,8 +46,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
 					"AzureDatabricks_accessToken": {
 						"value": "[parameters('AzureDatabricks_accessToken')]"
+					},
+					"Walmart_repo_accessToken": {
+						"value": "[parameters('Walmart_repo_accessToken')]"
 					}
 				}
 			},
