@@ -1,9 +1,9 @@
 {
-	"name": "pipeline1",
+	"name": "pipeline2",
 	"properties": {
 		"activities": [
 			{
-				"name": "DatabricksNotebook11",
+				"name": "DatabricksNotebook1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -23,7 +23,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook12",
+				"name": "DatabricksNotebook2",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -43,7 +43,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook13",
+				"name": "DatabricksNotebook3",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -63,7 +63,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook14",
+				"name": "DatabricksNotebook4",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -83,7 +83,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook15",
+				"name": "DatabricksNotebook5",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -103,7 +103,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook16",
+				"name": "DatabricksNotebook6",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -123,7 +123,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook17",
+				"name": "DatabricksNotebook7",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -143,7 +143,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook18",
+				"name": "DatabricksNotebook8",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -163,7 +163,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook19",
+				"name": "DatabricksNotebook9",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -183,7 +183,7 @@
 				}
 			},
 			{
-				"name": "DatabricksNotebook20",
+				"name": "DatabricksNotebook10",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
