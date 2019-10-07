@@ -11,8 +11,8 @@
 			"newClusterSparkEnvVars": {
 				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 			},
-			"newClusterVersion": "5.4.x-scala2.11",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNVUFBPUlQtREVNT19lMGY0YWZjYi1kYWVmLTRmYzEtOTY5NS03NDE0NzhjYzM3ZTciDQp9"
+			"newClusterVersion": "5.3.x-scala2.11",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNVUFBPUlQtREVNT183MTMxYjQwNy01ODE3LTRlZWItOTM3ZS1mNDA2YzgyOTYwNjQiDQp9"
 		}
 	}
 }
