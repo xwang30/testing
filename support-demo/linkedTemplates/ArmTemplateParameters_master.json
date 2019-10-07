@@ -5,6 +5,21 @@
 		"factoryName": {
 			"value": "support-demo"
 		},
+		"1472223352600185_100_accessToken": {
+			"value": ""
+		},
+		"1472223352600185_150_accessToken": {
+			"value": ""
+		},
+		"1472223352600185_20_accessToken": {
+			"value": ""
+		},
+		"1472223352600185_30_accessToken": {
+			"value": ""
+		},
+		"1472223352600185_50_accessToken": {
+			"value": ""
+		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},

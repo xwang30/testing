@@ -7,6 +7,26 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "support-demo"
 		},
+		"1472223352600185_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_100'"
+		},
+		"1472223352600185_150_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_150'"
+		},
+		"1472223352600185_20_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_20'"
+		},
+		"1472223352600185_30_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_30'"
+		},
+		"1472223352600185_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_50'"
+		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
@@ -70,6 +90,21 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"1472223352600185_100_accessToken": {
+						"value": "[parameters('1472223352600185_100_accessToken')]"
+					},
+					"1472223352600185_150_accessToken": {
+						"value": "[parameters('1472223352600185_150_accessToken')]"
+					},
+					"1472223352600185_20_accessToken": {
+						"value": "[parameters('1472223352600185_20_accessToken')]"
+					},
+					"1472223352600185_30_accessToken": {
+						"value": "[parameters('1472223352600185_30_accessToken')]"
+					},
+					"1472223352600185_50_accessToken": {
+						"value": "[parameters('1472223352600185_50_accessToken')]"
+					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
@@ -100,6 +135,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_0')]"
+			]
 		}
 	]
 }
