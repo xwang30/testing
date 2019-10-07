@@ -35,6 +35,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '3833264218587861_150'"
 		},
+		"3833264218587861_20_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_20'"
+		},
+		"3833264218587861_30_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_30'"
+		},
 		"3833264218587861_50_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
@@ -122,6 +130,12 @@
 					},
 					"3833264218587861_150_accessToken": {
 						"value": "[parameters('3833264218587861_150_accessToken')]"
+					},
+					"3833264218587861_20_accessToken": {
+						"value": "[parameters('3833264218587861_20_accessToken')]"
+					},
+					"3833264218587861_30_accessToken": {
+						"value": "[parameters('3833264218587861_30_accessToken')]"
 					},
 					"3833264218587861_50_accessToken": {
 						"value": "[parameters('3833264218587861_50_accessToken')]"
