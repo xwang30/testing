@@ -27,6 +27,26 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '1472223352600185_50'"
 		},
+		"1472223352600185_pool_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_pool_100'"
+		},
+		"1472223352600185_pool_150_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_pool_150'"
+		},
+		"1472223352600185_pool_20_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_pool_20'"
+		},
+		"1472223352600185_pool_30_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_pool_30'"
+		},
+		"1472223352600185_pool_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '1472223352600185_pool_50'"
+		},
 		"3833264218587861_100_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '3833264218587861_100'"
@@ -125,6 +145,21 @@
 					"1472223352600185_50_accessToken": {
 						"value": "[parameters('1472223352600185_50_accessToken')]"
 					},
+					"1472223352600185_pool_100_accessToken": {
+						"value": "[parameters('1472223352600185_pool_100_accessToken')]"
+					},
+					"1472223352600185_pool_150_accessToken": {
+						"value": "[parameters('1472223352600185_pool_150_accessToken')]"
+					},
+					"1472223352600185_pool_20_accessToken": {
+						"value": "[parameters('1472223352600185_pool_20_accessToken')]"
+					},
+					"1472223352600185_pool_30_accessToken": {
+						"value": "[parameters('1472223352600185_pool_30_accessToken')]"
+					},
+					"1472223352600185_pool_50_accessToken": {
+						"value": "[parameters('1472223352600185_pool_50_accessToken')]"
+					},
 					"3833264218587861_100_accessToken": {
 						"value": "[parameters('3833264218587861_100_accessToken')]"
 					},
@@ -154,18 +189,6 @@
 					},
 					"walmart_100_accessToken": {
 						"value": "[parameters('walmart_100_accessToken')]"
-					},
-					"walmart_150_accessToken": {
-						"value": "[parameters('walmart_150_accessToken')]"
-					},
-					"walmart_20_accessToken": {
-						"value": "[parameters('walmart_20_accessToken')]"
-					},
-					"walmart_50_accessToken": {
-						"value": "[parameters('walmart_50_accessToken')]"
-					},
-					"walmart_test_accessToken": {
-						"value": "[parameters('walmart_test_accessToken')]"
 					}
 				}
 			},
@@ -184,6 +207,18 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"walmart_150_accessToken": {
+						"value": "[parameters('walmart_150_accessToken')]"
+					},
+					"walmart_20_accessToken": {
+						"value": "[parameters('walmart_20_accessToken')]"
+					},
+					"walmart_50_accessToken": {
+						"value": "[parameters('walmart_50_accessToken')]"
+					},
+					"walmart_test_accessToken": {
+						"value": "[parameters('walmart_test_accessToken')]"
 					}
 				}
 			},
