@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '1472223352600185_50'"
 		},
+		"3833264218587861_150_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_150'"
+		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
@@ -104,6 +108,9 @@
 					},
 					"1472223352600185_50_accessToken": {
 						"value": "[parameters('1472223352600185_50_accessToken')]"
+					},
+					"3833264218587861_150_accessToken": {
+						"value": "[parameters('3833264218587861_150_accessToken')]"
 					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
