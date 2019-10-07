@@ -98,7 +98,7 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "1472223352600185_100",
+					"referenceName": "1472223352600185_50",
 					"type": "LinkedServiceReference"
 				}
 			},
@@ -118,7 +118,7 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "1472223352600185_100",
+					"referenceName": "1472223352600185_50",
 					"type": "LinkedServiceReference"
 				}
 			},

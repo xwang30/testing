@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "DatabricksNotebook1",
+				"name": "150_1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -18,7 +18,7 @@
 					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
-					"referenceName": "1472223352600185_100",
+					"referenceName": "3833264218587861_150",
 					"type": "LinkedServiceReference"
 				}
 			},
@@ -99,6 +99,26 @@
 				},
 				"linkedServiceName": {
 					"referenceName": "1472223352600185_100",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "150_2",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "3833264218587861_150",
 					"type": "LinkedServiceReference"
 				}
 			}
