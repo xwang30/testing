@@ -27,9 +27,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '1472223352600185_50'"
 		},
+		"3833264218587861_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_100'"
+		},
 		"3833264218587861_150_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '3833264218587861_150'"
+		},
+		"3833264218587861_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
 		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
@@ -66,14 +74,6 @@
 		"walmart_test_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'walmart_test'"
-		},
-		"3833264218587861_100_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of '3833264218587861_100'"
-		},
-		"3833264218587861_50_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -117,8 +117,14 @@
 					"1472223352600185_50_accessToken": {
 						"value": "[parameters('1472223352600185_50_accessToken')]"
 					},
+					"3833264218587861_100_accessToken": {
+						"value": "[parameters('3833264218587861_100_accessToken')]"
+					},
 					"3833264218587861_150_accessToken": {
 						"value": "[parameters('3833264218587861_150_accessToken')]"
+					},
+					"3833264218587861_50_accessToken": {
+						"value": "[parameters('3833264218587861_50_accessToken')]"
 					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
@@ -146,12 +152,6 @@
 					},
 					"walmart_test_accessToken": {
 						"value": "[parameters('walmart_test_accessToken')]"
-					},
-					"3833264218587861_100_accessToken": {
-						"value": "[parameters('3833264218587861_100_accessToken')]"
-					},
-					"3833264218587861_50_accessToken": {
-						"value": "[parameters('3833264218587861_50_accessToken')]"
 					}
 				}
 			},

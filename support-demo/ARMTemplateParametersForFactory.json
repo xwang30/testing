@@ -20,7 +20,13 @@
 		"1472223352600185_50_accessToken": {
 			"value": ""
 		},
+		"3833264218587861_100_accessToken": {
+			"value": ""
+		},
 		"3833264218587861_150_accessToken": {
+			"value": ""
+		},
+		"3833264218587861_50_accessToken": {
 			"value": ""
 		},
 		"AzureBlobStorage1_connectionString": {
@@ -48,12 +54,6 @@
 			"value": ""
 		},
 		"walmart_test_accessToken": {
-			"value": ""
-		},
-		"3833264218587861_100_accessToken": {
-			"value": ""
-		},
-		"3833264218587861_50_accessToken": {
 			"value": ""
 		}
 	}
