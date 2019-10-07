@@ -66,6 +66,14 @@
 		"walmart_test_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'walmart_test'"
+		},
+		"3833264218587861_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_100'"
+		},
+		"3833264218587861_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
 		}
 	},
 	"variables": {
@@ -395,6 +403,46 @@
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
+					"newClusterVersion": "5.4.x-scala2.11"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/3833264218587861_100')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://eastus.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('3833264218587861_100_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_D8s_v3",
+					"newClusterNumOfWorker": "99",
+					"newClusterVersion": "5.4.x-scala2.11"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/3833264218587861_50')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://eastus.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('3833264218587861_50_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_D8s_v3",
+					"newClusterNumOfWorker": "49",
 					"newClusterVersion": "5.4.x-scala2.11"
 				}
 			},
@@ -1161,578 +1209,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/walmart_20')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/3833264218587861')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "150_1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "3833264218587861_150",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "DatabricksNotebook2",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "1472223352600185_150",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "DatabricksNotebook3",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "1472223352600185_100",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "DatabricksNotebook4",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "1472223352600185_150",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "DatabricksNotebook5",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "1472223352600185_100",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "150_2",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "3833264218587861_150",
-							"type": "LinkedServiceReference"
-						}
-					}
-				],
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/3833264218587861_150')]",
-				"[concat(variables('factoryId'), '/linkedServices/1472223352600185_150')]",
-				"[concat(variables('factoryId'), '/linkedServices/1472223352600185_100')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/50 nodes')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "50nodes",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_50",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "50nodes1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_50",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "100nodes2",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_100",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "100nodes1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_100",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "150nodes",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_150",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "150nodes2",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_150",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "20nodes1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_20",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "20nodes2",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_20",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "20nodes3",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_20",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "20nodes4",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_20",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "20nodes5",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_20",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30nodes1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node2",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node3",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node4",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node5",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node6",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node7",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node8",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node9",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "30node10",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "walmart_test",
-							"type": "LinkedServiceReference"
-						}
-					}
-				],
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/walmart_50')]",
-				"[concat(variables('factoryId'), '/linkedServices/walmart_100')]",
-				"[concat(variables('factoryId'), '/linkedServices/walmart_150')]",
-				"[concat(variables('factoryId'), '/linkedServices/walmart_20')]",
-				"[concat(variables('factoryId'), '/linkedServices/walmart_test')]"
 			]
 		}
 	]

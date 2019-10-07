@@ -67,6 +67,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'walmart_test'"
 		},
+		"3833264218587861_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_100'"
+		},
+		"3833264218587861_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -138,6 +146,12 @@
 					},
 					"walmart_test_accessToken": {
 						"value": "[parameters('walmart_test_accessToken')]"
+					},
+					"3833264218587861_100_accessToken": {
+						"value": "[parameters('3833264218587861_100_accessToken')]"
+					},
+					"3833264218587861_50_accessToken": {
+						"value": "[parameters('3833264218587861_50_accessToken')]"
 					}
 				}
 			},
