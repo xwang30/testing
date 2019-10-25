@@ -67,6 +67,26 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
 		},
+		"6493261046722475_100_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_100'"
+		},
+		"6493261046722475_150_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_150'"
+		},
+		"6493261046722475_20_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_20'"
+		},
+		"6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5'"
+		},
+		"6493261046722475_50_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_50'"
+		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
@@ -175,20 +195,20 @@
 					"3833264218587861_50_accessToken": {
 						"value": "[parameters('3833264218587861_50_accessToken')]"
 					},
-					"AzureBlobStorage1_connectionString": {
-						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					"6493261046722475_100_accessToken": {
+						"value": "[parameters('6493261046722475_100_accessToken')]"
 					},
-					"AzureDatabricks_accessToken": {
-						"value": "[parameters('AzureDatabricks_accessToken')]"
+					"6493261046722475_150_accessToken": {
+						"value": "[parameters('6493261046722475_150_accessToken')]"
 					},
-					"Walmart_accessToken": {
-						"value": "[parameters('Walmart_accessToken')]"
+					"6493261046722475_20_accessToken": {
+						"value": "[parameters('6493261046722475_20_accessToken')]"
 					},
-					"Walmart_repo_accessToken": {
-						"value": "[parameters('Walmart_repo_accessToken')]"
+					"6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5_accessToken": {
+						"value": "[parameters('6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5_accessToken')]"
 					},
-					"walmart_100_accessToken": {
-						"value": "[parameters('walmart_100_accessToken')]"
+					"6493261046722475_50_accessToken": {
+						"value": "[parameters('6493261046722475_50_accessToken')]"
 					}
 				}
 			},
@@ -207,6 +227,21 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDatabricks_accessToken": {
+						"value": "[parameters('AzureDatabricks_accessToken')]"
+					},
+					"Walmart_accessToken": {
+						"value": "[parameters('Walmart_accessToken')]"
+					},
+					"Walmart_repo_accessToken": {
+						"value": "[parameters('Walmart_repo_accessToken')]"
+					},
+					"walmart_100_accessToken": {
+						"value": "[parameters('walmart_100_accessToken')]"
 					},
 					"walmart_150_accessToken": {
 						"value": "[parameters('walmart_150_accessToken')]"

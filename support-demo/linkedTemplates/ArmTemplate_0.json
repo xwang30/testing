@@ -67,25 +67,25 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of '3833264218587861_50'"
 		},
-		"AzureBlobStorage1_connectionString": {
+		"6493261046722475_100_accessToken": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_100'"
 		},
-		"AzureDatabricks_accessToken": {
+		"6493261046722475_150_accessToken": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks'"
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_150'"
 		},
-		"Walmart_accessToken": {
+		"6493261046722475_20_accessToken": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'Walmart'"
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_20'"
 		},
-		"Walmart_repo_accessToken": {
+		"6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5_accessToken": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'Walmart_repo'"
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5'"
 		},
-		"walmart_100_accessToken": {
+		"6493261046722475_50_accessToken": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'walmart_100'"
+			"metadata": "Secure string for 'accessToken' of '6493261046722475_50'"
 		}
 	},
 	"variables": {
@@ -405,52 +405,20 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStorage1_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureDatabricks')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "Connect to workspace",
-				"annotations": [],
-				"type": "AzureDatabricks",
-				"typeProperties": {
-					"domain": "https://westus2.azuredatabricks.net",
-					"accessToken": {
-						"type": "SecureString",
-						"value": "[parameters('AzureDatabricks_accessToken')]"
-					},
-					"existingClusterId": "0816-231109-albs775"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/Walmart')]",
+			"name": "[concat(parameters('factoryName'), '/6493261046722475_100')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"type": "AzureDatabricks",
 				"typeProperties": {
-					"domain": "https://eastus.azuredatabricks.net",
+					"domain": "https://eastus.staging.azuredatabricks.net",
 					"accessToken": {
 						"type": "SecureString",
-						"value": "[parameters('Walmart_accessToken')]"
+						"value": "[parameters('6493261046722475_100_accessToken')]"
 					},
-					"newClusterNodeType": "Standard_D16s_v3",
-					"newClusterNumOfWorker": "150",
+					"newClusterNodeType": "Standard_D8s_v3",
+					"newClusterNumOfWorker": "99",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
@@ -460,43 +428,89 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Walmart_repo')]",
+			"name": "[concat(parameters('factoryName'), '/6493261046722475_150')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"type": "AzureDatabricks",
 				"typeProperties": {
-					"domain": "https://eastus.azuredatabricks.net",
+					"domain": "https://eastus.staging.azuredatabricks.net",
 					"accessToken": {
 						"type": "SecureString",
-						"value": "[parameters('Walmart_repo_accessToken')]"
+						"value": "[parameters('6493261046722475_150_accessToken')]"
 					},
-					"newClusterNodeType": "Standard_D16s_v3",
-					"newClusterNumOfWorker": "100",
+					"newClusterNodeType": "Standard_D8s_v3",
+					"newClusterNumOfWorker": "149",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
-					"newClusterVersion": "apache-spark-2.4.x-scala2.11"
+					"newClusterVersion": "5.4.x-scala2.11"
 				}
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/walmart_100')]",
+			"name": "[concat(parameters('factoryName'), '/6493261046722475_20')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"type": "AzureDatabricks",
 				"typeProperties": {
-					"domain": "https://eastus.azuredatabricks.net",
+					"domain": "https://eastus.staging.azuredatabricks.net",
 					"accessToken": {
 						"type": "SecureString",
-						"value": "[parameters('walmart_100_accessToken')]"
+						"value": "[parameters('6493261046722475_20_accessToken')]"
 					},
 					"newClusterNodeType": "Standard_D8s_v3",
-					"newClusterNumOfWorker": "99",
+					"newClusterNumOfWorker": "23",
+					"newClusterSparkEnvVars": {
+						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+					},
+					"newClusterVersion": "5.4.x-scala2.11"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://eastus.staging.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('6493261046722475_30 dapie810b8be31354b70709e3d6f019fddf5_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_D8s_v3",
+					"newClusterNumOfWorker": "29",
+					"newClusterSparkEnvVars": {
+						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+					},
+					"newClusterVersion": "5.4.x-scala2.11"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/6493261046722475_50')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://eastus.staging.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('6493261046722475_50_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_D8s_v3",
+					"newClusterNumOfWorker": "49",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
