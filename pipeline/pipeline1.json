@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/b-ihles@microsoft.com"
+					"notebookPath": "/Shared/test"
 				},
 				"linkedServiceName": {
 					"referenceName": "1310024892097610_30",
