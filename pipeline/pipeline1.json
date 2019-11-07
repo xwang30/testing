@@ -21,6 +21,86 @@
 					"referenceName": "1310024892097610_30",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "30_1_copy1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "1310024892097610_30",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "30_1_copy2",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "1310024892097610_30",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "30_1_copy3",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "1310024892097610_30",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "30_1_copy4",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/test"
+				},
+				"linkedServiceName": {
+					"referenceName": "1310024892097610_30",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
