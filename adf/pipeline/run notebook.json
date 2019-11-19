@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/xin.wang@databricks.com/adf test",
+					"notebookPath": "/Users/xin.wang@databricks.com/tech_talk",
 					"baseParameters": {
 						"TableName": "adf_demo"
 					},
