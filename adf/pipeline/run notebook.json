@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"notebookPath": "/Users/xin.wang@databricks.com/tech_talk",
 					"baseParameters": {
-						"TableName": "adf_demo"
+						"print": "Hello World "
 					},
 					"libraries": [
 						{
