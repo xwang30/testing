@@ -6,14 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "NRP-testing"
-		},
-		"1310024892097610_30_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of '1310024892097610_30'"
-		},
-		"5649599232280848_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of '5649599232280848'"
 		}
 	},
 	"variables": {
@@ -27,7 +19,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "499_1",
+						"name": "Notebook1",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -51,7 +43,7 @@
 						"type": "DatabricksNotebook",
 						"dependsOn": [
 							{
-								"activity": "499_1",
+								"activity": "Notebook1",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -297,62 +289,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/test_connection')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "Notebook1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Shared/test"
-						},
-						"linkedServiceName": {
-							"referenceName": "5649599232280848",
-							"type": "LinkedServiceReference"
-						}
-					}
-				],
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/5649599232280848')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/1310024892097610_30')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureDatabricks",
-				"typeProperties": {
-					"domain": "https://northeurope.staging.azuredatabricks.net",
-					"accessToken": {
-						"type": "SecureString",
-						"value": "[parameters('1310024892097610_30_accessToken')]"
-					},
-					"newClusterNodeType": "Standard_F4s",
-					"newClusterNumOfWorker": "99",
-					"newClusterSparkEnvVars": {
-						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
-					},
-					"newClusterVersion": "5.4.x-scala2.11"
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/5649599232280848')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -364,7 +300,7 @@
 					"domain": "https://southeastasia.staging.azuredatabricks.net",
 					"accessToken": {
 						"type": "SecureString",
-						"value": "[parameters('5649599232280848_accessToken')]"
+						"value": "**********"
 					},
 					"newClusterNodeType": "Standard_DS2_v2",
 					"newClusterNumOfWorker": "499",

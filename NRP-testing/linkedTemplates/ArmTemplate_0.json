@@ -48,6 +48,7 @@
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "aaa",
 				"annotations": [],
 				"type": "AzureDatabricks",
 				"typeProperties": {
@@ -57,7 +58,7 @@
 						"value": "[parameters('5649599232280848_accessToken')]"
 					},
 					"newClusterNodeType": "Standard_DS2_v2",
-					"newClusterNumOfWorker": "1500",
+					"newClusterNumOfWorker": "499",
 					"newClusterSparkEnvVars": {
 						"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
 					},
@@ -73,7 +74,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "30_1",
+						"name": "499_1",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -88,14 +89,21 @@
 							"notebookPath": "/Shared/test"
 						},
 						"linkedServiceName": {
-							"referenceName": "1310024892097610_30",
+							"referenceName": "5649599232280848",
 							"type": "LinkedServiceReference"
 						}
 					},
 					{
-						"name": "30_1_copy1",
+						"name": "Notebook1_copy1",
 						"type": "DatabricksNotebook",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "499_1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -108,14 +116,21 @@
 							"notebookPath": "/Shared/test"
 						},
 						"linkedServiceName": {
-							"referenceName": "1310024892097610_30",
+							"referenceName": "5649599232280848",
 							"type": "LinkedServiceReference"
 						}
 					},
 					{
-						"name": "30_1_copy2",
+						"name": "Notebook1_copy2",
 						"type": "DatabricksNotebook",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -128,14 +143,21 @@
 							"notebookPath": "/Shared/test"
 						},
 						"linkedServiceName": {
-							"referenceName": "1310024892097610_30",
+							"referenceName": "5649599232280848",
 							"type": "LinkedServiceReference"
 						}
 					},
 					{
-						"name": "30_1_copy3",
+						"name": "Notebook1_copy3",
 						"type": "DatabricksNotebook",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy2",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -148,14 +170,21 @@
 							"notebookPath": "/Shared/test"
 						},
 						"linkedServiceName": {
-							"referenceName": "1310024892097610_30",
+							"referenceName": "5649599232280848",
 							"type": "LinkedServiceReference"
 						}
 					},
 					{
-						"name": "30_1_copy4",
+						"name": "Notebook1_copy4",
 						"type": "DatabricksNotebook",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy3",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -168,7 +197,142 @@
 							"notebookPath": "/Shared/test"
 						},
 						"linkedServiceName": {
-							"referenceName": "1310024892097610_30",
+							"referenceName": "5649599232280848",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "Notebook1_copy5",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy4",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Shared/test"
+						},
+						"linkedServiceName": {
+							"referenceName": "5649599232280848",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "Notebook1_copy5_copy1",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy5",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Shared/test"
+						},
+						"linkedServiceName": {
+							"referenceName": "5649599232280848",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "Notebook1_copy5_copy2",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy5_copy1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Shared/test"
+						},
+						"linkedServiceName": {
+							"referenceName": "5649599232280848",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "Notebook1_copy5_copy3",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy5_copy2",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Shared/test"
+						},
+						"linkedServiceName": {
+							"referenceName": "5649599232280848",
+							"type": "LinkedServiceReference"
+						}
+					},
+					{
+						"name": "Notebook1_copy5_copy4",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "Notebook1_copy5_copy3",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Shared/test"
+						},
+						"linkedServiceName": {
+							"referenceName": "5649599232280848",
 							"type": "LinkedServiceReference"
 						}
 					}
@@ -176,7 +340,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/1310024892097610_30')]"
+				"[concat(variables('factoryId'), '/linkedServices/5649599232280848')]"
 			]
 		},
 		{
