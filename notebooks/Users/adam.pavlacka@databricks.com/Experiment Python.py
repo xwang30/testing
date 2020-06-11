@@ -34,7 +34,7 @@ display(dbutils.fs.ls("dbfs:/databricks/init_scripts/ntp.sh"))
 
 # COMMAND ----------
 
-# MAGIC %sh ntpq -p
+# MAGIC %sh ntpq -p haha
 
 # COMMAND ----------
 
