@@ -22,4 +22,4 @@ dbutils.fs.rm("/databricks/init/global.sh")
 
 // COMMAND ----------
 
-// MAGIC %sh echo testing
+// MAGIC %sh echo testing master 1

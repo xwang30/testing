@@ -1,0 +1,19 @@
+{
+	"name": "5649599232280848",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "aaa",
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://southeastasia.staging.azuredatabricks.net",
+			"newClusterNodeType": "Standard_DS2_v2",
+			"newClusterNumOfWorker": "499",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "latest-stable-scala2.11",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIk5SUC1URVNUSU5HXzRiZThhMzI3LTkyZDItNDk2Yi1iNDMzLTFhZmU3MWU0MGMzMiINCn0="
+		}
+	}
+}

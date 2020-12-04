@@ -1,0 +1,36 @@
+{
+	"name": "run jar file",
+	"properties": {
+		"activities": [
+			{
+				"name": "Jar1",
+				"type": "DatabricksSparkJar",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"mainClassName": "com.test.JobRunner",
+					"parameters": [
+						"dbfs:/FileStore/tables/example.json"
+					],
+					"libraries": [
+						{
+							"jar": "dbfs:/FileStore/tables/test_etls_assembly_1_0-fed11.jar"
+						}
+					]
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
