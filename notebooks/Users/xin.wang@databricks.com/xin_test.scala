@@ -1,62 +1,76 @@
 // Databricks notebook source
 // MAGIC %sh
-// MAGIC cat /databricks/hive/conf/hive-site.xml
-
-// COMMAND ----------
-
-import org.apache.spark.sql.functions._ 
-spark.sql("set spark.sql.shuffle.partitions=20000")
-val dis = spark.sql("select * from xin_test_table")
-val unionDF = dis.union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis).union(dis)
-val df = unionDF.withColumn("id",monotonically_increasing_id())
-val result = df.where(($"id"%2 === 0) || ($"id"%2 === 1)).sort($"_c0".asc)
-result.repartition(2000)
-result.write.mode("overwrite").csv("/tmp/csv")
-
-// COMMAND ----------
-
-dbutils.fs.put("/databricks/test/openssl.sh","""
-#!/bin/bash
-/databricks/python/bin/pip install pyOpenSSL==19.0.0""")
-
-// COMMAND ----------
-
-import sqlContext.implicits._
-import org.apache.spark.sql.Row
-import org.apache.spark.sql.functions.abs
-
-val matches = sqlContext.sparkContext.parallelize(Row(1, "John Wayne", "John Doe"), Row(2, "Ive Fish", "San Simon")))
-
-val players = sqlContext.sparkContext.parallelize(Seq(
-  Row("John Wayne", 1986),
-  Row("Ive Fish", 1990),
-  Row("San Simon", 1974),
-  Row("John Doe", 1995)
-))
-
-val matchesDf = sqlContext.createDataFrame(matches, StructType(Seq(
-  StructField("matchId", IntegerType, nullable = false),
-  StructField("player1", StringType, nullable = false),
-  StructField("player2", StringType, nullable = false)))
-).as('matches)
-
-val playersDf = sqlContext.createDataFrame(players, StructType(Seq(
-  StructField("player", StringType, nullable = false),
-  StructField("birthYear", IntegerType, nullable = false)
-))).as('players)
-
-matchesDf
-  .join(playersDf, $"matches.player1" === $"players.player")
-  .select($"matches.matchId" as "matchId", $"matches.player1" as "player1", $"matches.player2" as "player2", $"players.birthYear" as "player1BirthYear")
-  .join(playersDf, $"player2" === $"players.player")
-  .select($"matchId" as "MatchID", $"player1" as "Player1", $"player2" as "Player2", $"player1BirthYear" as "BYear_P1", $"players.birthYear" as "BYear_P2")
-  .withColumn("Diff", abs('BYear_P2.minus('BYear_P1)))
-  .show()
-
-// COMMAND ----------
-
-// MAGIC %scala
 // MAGIC 
-// MAGIC commit new 4
+// MAGIC wget https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js
 
 // COMMAND ----------
+
+test = "Previdência"
+
+// COMMAND ----------
+
+dbutils.secrets.get("xin", "password1")
+
+// COMMAND ----------
+
+val db = spark.sql("show tables")
+val db_name = db.select("tableName").rdd.map(r => r(0)).collect()
+for (name <- db_name) spark.sql(s"""insert into $name values(16,17)""")
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC SELECT * FROM global_temp.people 
+
+// COMMAND ----------
+
+val db = spark.sql("show tables")
+db.createGlobalTempView("people")
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC select * from global_temp.people
+
+// COMMAND ----------
+
+spark.sql("show databases").show(1000,false)
+
+// COMMAND ----------
+
+db_name.write.format("parquet").saveAsTable("defaultname")
+
+// COMMAND ----------
+
+spark.sql(s"""insert into $name values(13,14)""")
+spark.sql("insert into test1 values(14,15)")
+
+// COMMAND ----------
+
+val mount = dbutils.fs.ls(s"/mnt/").toDF
+
+// COMMAND ----------
+
+
+
+// COMMAND ----------
+
+var seq:Seq[Int] = Seq(52,85,1,8,3,2,7)
+val df = seq.toDF
+
+// COMMAND ----------
+
+// MAGIC %sh
+// MAGIC pip install -U databricks-connect==5.5.*
+
+// COMMAND ----------
+
+display(dbutils.fs.ls("/"))
+
+// COMMAND ----------
+
+// MAGIC %sh
+// MAGIC java -version
+
+// COMMAND ----------
+
