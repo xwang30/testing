@@ -5,7 +5,7 @@
 
 // COMMAND ----------
 
-test = "Previdência"
+github_test = "Previdência"
 
 // COMMAND ----------
 
