@@ -9,7 +9,7 @@ from_github = "Previdência"
 
 // COMMAND ----------
 
-dbutils.secrets.get("xin", "password1")
+dbutils.secrets.get("xin", "password")
 
 // COMMAND ----------
 
