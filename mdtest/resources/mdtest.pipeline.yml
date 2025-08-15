@@ -1,0 +1,14 @@
+# The main pipeline for mdtest
+resources:
+  pipelines:
+    mdtest_pipeline:
+      name: mdtest_pipeline
+      catalog: default
+      schema: mdtest_${bundle.target}
+      serverless: true
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src

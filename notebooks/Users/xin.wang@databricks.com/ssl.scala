@@ -141,15 +141,15 @@ println(result)
 
 // COMMAND ----------
 
-// MAGIC %scala
-// MAGIC dbutils.fs.put("/xin/modify_cipher.sh", """#!/bin/bash
-// MAGIC cp /databricks/spark/dbconf/java/extra.security /databricks/spark/dbconf/java/extra_v1.security;
-// MAGIC sed -i 's/, GCM//g' /databricks/spark/dbconf/java/extra_v1.security
-// MAGIC """, true)
+dbutils.fs.put("/xin/modify_cipher.sh", """#!/bin/bash
+cp /databricks/spark/dbconf/java/extra.security /databricks/spark/dbconf/java/extra_v1.security;
+sed -i 's/, GCM//g' /databricks/spark/dbconf/java/extra_v1.security
+""", true)
 
 // COMMAND ----------
 
 // MAGIC %fs ls /
 
 // COMMAND ----------
+
 
